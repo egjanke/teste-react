@@ -41,7 +41,8 @@ class Clients extends React.Component {
 
     async loadClients() {
         try {
-            let res = await clientService.list();
+            let search = this.props.router.location.search;
+            let res = await clientService.list(search);
             this.setState({clients: res.data});
         }
         catch (error) {

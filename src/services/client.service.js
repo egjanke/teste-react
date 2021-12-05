@@ -6,8 +6,8 @@ const apiUrl = "http://localhost:8002/api"
 const clientService = {
 
     // Função para listar os clientes 
-    async list(){
-        const enpoint = apiUrl + "/clients"
+    async list(search = ''){
+        const enpoint = apiUrl + "/clients" + search
         return axios.get(enpoint)
     },
 

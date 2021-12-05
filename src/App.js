@@ -5,6 +5,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Clients from './pages/clients/clients.page';
 import Client from './pages/client/client.page';
 import Post from './pages/post/post.page';
+import Filter from './Filter';
 
 class App extends React.Component{
   render(){
@@ -12,6 +13,7 @@ class App extends React.Component{
       <BrowserRouter>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link to='/clients' className="navbar-brand">Clientes</Link>
+          <Filter/>
         </nav>
         <Routes>
           <Route path='/' element={<Clients/>} />
